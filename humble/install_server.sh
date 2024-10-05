@@ -1,5 +1,6 @@
 #/bin/bash -xve
 
+sudo apt purge needrestart
 
 sudo apt update -y && sudo apt install -y curl
 sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
