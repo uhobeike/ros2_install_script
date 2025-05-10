@@ -2,11 +2,11 @@
 
 echo -e "\n## Execute ${BASH_SOURCE[0]} $(date +'%Y/%m/%d %H:%M:%S')"  >> ~/.bashrc
 
-grep "source /opt/ros/humble/setup.bash" ~/.bashrc
+grep "source /opt/ros/${ROS_DISTRO}/setup.bash" ~/.bashrc
 if [ $? = 0 ]; then
   :
 else
-  echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+  echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> ~/.bashrc
 fi
 
 grep "export ROS_DOMAIN_ID=" ~/.bashrc
